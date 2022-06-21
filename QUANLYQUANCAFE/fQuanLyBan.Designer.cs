@@ -31,37 +31,39 @@ namespace QUANLYQUANCAFE
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quảnLýToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinCáNhânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.lsvThongTinHoaDon = new System.Windows.Forms.ListView();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.cbbDanhMucMonAn = new System.Windows.Forms.ComboBox();
-            this.cbbMonAn = new System.Windows.Forms.ComboBox();
-            this.btnThemMon = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnThanhToan = new System.Windows.Forms.Button();
-            this.btnGiamGia = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lsvThongTinHoaDon = new System.Windows.Forms.ListView();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.nudGiamGia = new System.Windows.Forms.NumericUpDown();
-            this.quảnLýToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnGiamGia = new System.Windows.Forms.Button();
+            this.btnThanhToan = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.btnThemMon = new System.Windows.Forms.Button();
+            this.cbbMonAn = new System.Windows.Forms.ComboBox();
+            this.cbbDanhMucMonAn = new System.Windows.Forms.ComboBox();
+            this.thêmMớiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGiamGia)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudGiamGia)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.adminToolStripMenuItem,
-            this.thôngTinTàiKhoảnToolStripMenuItem});
+            this.thôngTinTàiKhoảnToolStripMenuItem,
+            this.thêmMớiToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -76,6 +78,13 @@ namespace QUANLYQUANCAFE
             this.adminToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.adminToolStripMenuItem.Text = "Admin";
             // 
+            // quảnLýToolStripMenuItem
+            // 
+            this.quảnLýToolStripMenuItem.Name = "quảnLýToolStripMenuItem";
+            this.quảnLýToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.quảnLýToolStripMenuItem.Text = "Quản lý";
+            this.quảnLýToolStripMenuItem.Click += new System.EventHandler(this.quảnLýToolStripMenuItem_Click);
+            // 
             // thôngTinTàiKhoảnToolStripMenuItem
             // 
             this.thôngTinTàiKhoảnToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -88,13 +97,13 @@ namespace QUANLYQUANCAFE
             // thôngTinCáNhânToolStripMenuItem
             // 
             this.thôngTinCáNhânToolStripMenuItem.Name = "thôngTinCáNhânToolStripMenuItem";
-            this.thôngTinCáNhânToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.thôngTinCáNhânToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.thôngTinCáNhânToolStripMenuItem.Text = "Thông tin cá nhân";
             // 
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             // 
             // panel1
@@ -105,6 +114,14 @@ namespace QUANLYQUANCAFE
             this.panel1.Size = new System.Drawing.Size(433, 410);
             this.panel1.TabIndex = 1;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(433, 410);
+            this.flowLayoutPanel1.TabIndex = 0;
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.lsvThongTinHoaDon);
@@ -112,6 +129,16 @@ namespace QUANLYQUANCAFE
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(335, 284);
             this.panel2.TabIndex = 2;
+            // 
+            // lsvThongTinHoaDon
+            // 
+            this.lsvThongTinHoaDon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lsvThongTinHoaDon.HideSelection = false;
+            this.lsvThongTinHoaDon.Location = new System.Drawing.Point(0, 0);
+            this.lsvThongTinHoaDon.Name = "lsvThongTinHoaDon";
+            this.lsvThongTinHoaDon.Size = new System.Drawing.Size(335, 284);
+            this.lsvThongTinHoaDon.TabIndex = 0;
+            this.lsvThongTinHoaDon.UseCompatibleStateImageBehavior = false;
             // 
             // panel3
             // 
@@ -123,15 +150,31 @@ namespace QUANLYQUANCAFE
             this.panel3.Size = new System.Drawing.Size(335, 52);
             this.panel3.TabIndex = 3;
             // 
-            // lsvThongTinHoaDon
+            // nudGiamGia
             // 
-            this.lsvThongTinHoaDon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lsvThongTinHoaDon.HideSelection = false;
-            this.lsvThongTinHoaDon.Location = new System.Drawing.Point(0, 0);
-            this.lsvThongTinHoaDon.Name = "lsvThongTinHoaDon";
-            this.lsvThongTinHoaDon.Size = new System.Drawing.Size(335, 284);
-            this.lsvThongTinHoaDon.TabIndex = 0;
-            this.lsvThongTinHoaDon.UseCompatibleStateImageBehavior = false;
+            this.nudGiamGia.Location = new System.Drawing.Point(176, 29);
+            this.nudGiamGia.Name = "nudGiamGia";
+            this.nudGiamGia.Size = new System.Drawing.Size(75, 20);
+            this.nudGiamGia.TabIndex = 4;
+            this.nudGiamGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnGiamGia
+            // 
+            this.btnGiamGia.Location = new System.Drawing.Point(176, 3);
+            this.btnGiamGia.Name = "btnGiamGia";
+            this.btnGiamGia.Size = new System.Drawing.Size(75, 26);
+            this.btnGiamGia.TabIndex = 4;
+            this.btnGiamGia.Text = "Giảm giá";
+            this.btnGiamGia.UseVisualStyleBackColor = true;
+            // 
+            // btnThanhToan
+            // 
+            this.btnThanhToan.Location = new System.Drawing.Point(257, 1);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Size = new System.Drawing.Size(75, 48);
+            this.btnThanhToan.TabIndex = 3;
+            this.btnThanhToan.Text = "Thanh toán";
+            this.btnThanhToan.UseVisualStyleBackColor = true;
             // 
             // panel4
             // 
@@ -144,21 +187,12 @@ namespace QUANLYQUANCAFE
             this.panel4.Size = new System.Drawing.Size(335, 61);
             this.panel4.TabIndex = 4;
             // 
-            // cbbDanhMucMonAn
+            // numericUpDown1
             // 
-            this.cbbDanhMucMonAn.FormattingEnabled = true;
-            this.cbbDanhMucMonAn.Location = new System.Drawing.Point(4, 4);
-            this.cbbDanhMucMonAn.Name = "cbbDanhMucMonAn";
-            this.cbbDanhMucMonAn.Size = new System.Drawing.Size(198, 21);
-            this.cbbDanhMucMonAn.TabIndex = 0;
-            // 
-            // cbbMonAn
-            // 
-            this.cbbMonAn.FormattingEnabled = true;
-            this.cbbMonAn.Location = new System.Drawing.Point(4, 31);
-            this.cbbMonAn.Name = "cbbMonAn";
-            this.cbbMonAn.Size = new System.Drawing.Size(198, 21);
-            this.cbbMonAn.TabIndex = 1;
+            this.numericUpDown1.Location = new System.Drawing.Point(290, 18);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(41, 20);
+            this.numericUpDown1.TabIndex = 3;
             // 
             // btnThemMon
             // 
@@ -169,53 +203,27 @@ namespace QUANLYQUANCAFE
             this.btnThemMon.Text = "Thêm món";
             this.btnThemMon.UseVisualStyleBackColor = true;
             // 
-            // numericUpDown1
+            // cbbMonAn
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(290, 18);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(41, 20);
-            this.numericUpDown1.TabIndex = 3;
+            this.cbbMonAn.FormattingEnabled = true;
+            this.cbbMonAn.Location = new System.Drawing.Point(4, 31);
+            this.cbbMonAn.Name = "cbbMonAn";
+            this.cbbMonAn.Size = new System.Drawing.Size(198, 21);
+            this.cbbMonAn.TabIndex = 1;
             // 
-            // flowLayoutPanel1
+            // cbbDanhMucMonAn
             // 
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(433, 410);
-            this.flowLayoutPanel1.TabIndex = 0;
+            this.cbbDanhMucMonAn.FormattingEnabled = true;
+            this.cbbDanhMucMonAn.Location = new System.Drawing.Point(4, 4);
+            this.cbbDanhMucMonAn.Name = "cbbDanhMucMonAn";
+            this.cbbDanhMucMonAn.Size = new System.Drawing.Size(198, 21);
+            this.cbbDanhMucMonAn.TabIndex = 0;
             // 
-            // btnThanhToan
+            // thêmMớiToolStripMenuItem
             // 
-            this.btnThanhToan.Location = new System.Drawing.Point(257, 1);
-            this.btnThanhToan.Name = "btnThanhToan";
-            this.btnThanhToan.Size = new System.Drawing.Size(75, 48);
-            this.btnThanhToan.TabIndex = 3;
-            this.btnThanhToan.Text = "Thanh toán";
-            this.btnThanhToan.UseVisualStyleBackColor = true;
-            // 
-            // btnGiamGia
-            // 
-            this.btnGiamGia.Location = new System.Drawing.Point(176, 3);
-            this.btnGiamGia.Name = "btnGiamGia";
-            this.btnGiamGia.Size = new System.Drawing.Size(75, 26);
-            this.btnGiamGia.TabIndex = 4;
-            this.btnGiamGia.Text = "Giảm giá";
-            this.btnGiamGia.UseVisualStyleBackColor = true;
-            // 
-            // nudGiamGia
-            // 
-            this.nudGiamGia.Location = new System.Drawing.Point(176, 29);
-            this.nudGiamGia.Name = "nudGiamGia";
-            this.nudGiamGia.Size = new System.Drawing.Size(75, 20);
-            this.nudGiamGia.TabIndex = 4;
-            this.nudGiamGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // quảnLýToolStripMenuItem
-            // 
-            this.quảnLýToolStripMenuItem.Name = "quảnLýToolStripMenuItem";
-            this.quảnLýToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.quảnLýToolStripMenuItem.Text = "Quản lý";
-            this.quảnLýToolStripMenuItem.Click += new System.EventHandler(this.quảnLýToolStripMenuItem_Click);
+            this.thêmMớiToolStripMenuItem.Name = "thêmMớiToolStripMenuItem";
+            this.thêmMớiToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
+            this.thêmMớiToolStripMenuItem.Text = "Thêm mới";
             // 
             // fQuanLyBan
             // 
@@ -236,9 +244,9 @@ namespace QUANLYQUANCAFE
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nudGiamGia)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudGiamGia)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -265,5 +273,6 @@ namespace QUANLYQUANCAFE
         private System.Windows.Forms.ComboBox cbbMonAn;
         private System.Windows.Forms.ComboBox cbbDanhMucMonAn;
         private System.Windows.Forms.ToolStripMenuItem quảnLýToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem thêmMớiToolStripMenuItem;
     }
 }
